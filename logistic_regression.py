@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import make_classification
-from sklearn.metrics import accuracy_score
 import seaborn as sns
 
 def sigmoid(x):
@@ -61,7 +60,18 @@ plt.ylabel("Cost")
 plt.show()
 
 y_pred = predict(X, params_optimal)
-score = accuracy_score(y, y_pred)
+score = float(sum(y_pred == y))/ float(len(y))
 
 print(score)
 
+slope = -(params_optimal[1] / params_optimal[2])
+intercept = -(params_optimal[0] / params_optimal[2])
+
+sns.set_style('white')
+sns.scatterplot(X[:,1],X[:,2],hue=y.reshape(-1));
+
+ax = plt.gca()
+ax.autoscale(False)
+x_vals = np.array(ax.get_xlim())
+y_vals = intercept + (slope * x_vals)
+plt.plot(x_vals, y_vals, c="k");
