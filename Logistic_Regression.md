@@ -96,7 +96,7 @@ sns.scatterplot(X[:,0],X[:,1],hue=y.reshape(-1));
 ```
 
 
-![png](output_11_0.png)
+![png](img/output_11_0.png)
 
 
 After coding out the necessary functions, let's create our own dataset with `make_classification` function from `sklearn.datasets`. We create 500 sample points with two classes and plot the dataset with the help of `seaborn` library.
@@ -139,7 +139,7 @@ plt.show()
 
 
 
-![png](output_13_1.png)
+![png](img/output_13_1.png)
 
 
 Now, let's run our algorithm and calculate the parameters of our model. Seeing plot, we can now be sure that we have implemented the logistic regression algorithm without a fault, since it decreases with every iteration until the decrease is so minimal that the cost converges to a minimum which is what we want indeed.
@@ -176,7 +176,7 @@ plt.plot(x_vals, y_vals, c="k");
 ```
 
 
-![png](output_17_0.png)
+![png](img/output_17_0.png)
 
 
 Now, for the sake of visualization lets plot our dataset along with the decision boundary of our model. We simply calculate the intercept and slope values using the optimal parameters and plot the boundary that classifies the data into two classes. We can see from the plot that the classification is not 100% correct since the separation of classes is not linear naturally. Nevertheless, misclassified points (false positives and false negatives) are really few, so we have done a pretty good job with this implementation of logistic regression.
