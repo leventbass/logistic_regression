@@ -1,6 +1,5 @@
 
 # Logistic Regression from Scratch with NumPy
----
 
 Welcome to another post of machine learning algorithm implementation! Today, the algorithm that will be implementing from scratch is **Logistic Regression**. After its sibling algorithm linear regression, this one is higly used in machine learning as well, due to its simplicity and robustness. Even though its called logistic *regression*, it's actually a classification algorithm that is used to classify input data into its classes (labels).
     
@@ -17,7 +16,7 @@ The term logistic in logistic regression is used because this time we are applyi
 
 Sigmoid function always outputs values between 0 and 1, and thus can be used to calculate probabilities of input data belonging to a certain class:
 
-$ sigmoid(x) =  \frac{\mathrm{1} }{\mathrm{1 + e^{-x}}}  $
+sigmoid(x) =  1 / (1 + e^(-x))
 
 <img src="img/sigmoid.png" width="400"/>
     
